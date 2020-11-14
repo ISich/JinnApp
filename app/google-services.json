@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1061449655909",
+    "firebase_url": "https://jinnapp-5ded9.firebaseio.com",
+    "project_id": "jinnapp-5ded9",
+    "storage_bucket": "jinnapp-5ded9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061449655909:android:f24425a2605ae9e6a2088c",
+        "android_client_info": {
+          "package_name": "com.example.jinnapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061449655909-7vh9c1jp0234i9ldj11jbaj4kge105au.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jinnapp",
+            "certificate_hash": "7923a1cf4a51ff98010b69686c76e7688065a699"
+          }
+        },
+        {
+          "client_id": "1061449655909-sc8ck3eqb5tt0iesed57a64m72vuh0e9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByCw0Zsb4n2WzHaNMaJ-pvZjVe3KMpDN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061449655909-sc8ck3eqb5tt0iesed57a64m72vuh0e9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
