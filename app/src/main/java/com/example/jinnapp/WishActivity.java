@@ -15,6 +15,7 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
     TextView title_wish;
     TextView namae_wish;
     TextView wish_wish;
+    TextView alias_wish;
     Button submit_done;
 
     @Override
@@ -29,9 +30,11 @@ public class WishActivity extends AppCompatActivity implements View.OnClickListe
         String title = intent.getStringExtra("title");
         String namae = intent.getStringExtra("namae");
         String wish = intent.getStringExtra("wish");
+        String alias = intent.getStringExtra("alias");
         title_wish.setText(title);
         namae_wish.setText(namae);
         wish_wish.setText(wish);
+        alias_wish.setText("tg "+alias);
         submit_done.setOnClickListener(this);
     }
 

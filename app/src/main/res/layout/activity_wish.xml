@@ -36,14 +36,12 @@
         android:id="@+id/wish_wish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="24dp"
         android:gravity="left"
         android:paddingRight="24dp"
         android:text="I dreamed about coffee for so long! But I am at university right now and can't skip lesson to go and buy coffee, Can you buy it for me please?"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/namae_wish"
         app:layout_constraintTop_toBottomOf="@+id/namae_wish" />
 
     <Button
@@ -55,5 +53,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/alias_wish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="12345"
+        app:layout_constraintStart_toStartOf="@+id/wish_wish"
+        app:layout_constraintTop_toBottomOf="@+id/wish_wish" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

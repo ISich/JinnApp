@@ -70,6 +70,7 @@ public class WishTableActivity extends AppCompatActivity implements ChildEventLi
                 intent3.putExtra("title",some_data[0]);
                 intent3.putExtra("namae",some_data[1]);
                 intent3.putExtra("wish",some_data[2]);
+                intent3.putExtra("alias",some_data[3]);
                 startActivity(intent3);
             }
         });
