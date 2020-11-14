@@ -14,9 +14,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class MapActivity extends AppCompatActivity implements ChildEventListener{
+public class MapActivity extends AppCompatActivity implements ChildEventListener {
 
-    int countID=0;
+    int countID = 0;
+    LinearLayout llMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MapActivity extends AppCompatActivity implements ChildEventListener
         DatabaseReference myRef = database.getReference("message");
         myRef.addChildEventListener(this);
 
+
     }
 
     @Override
@@ -35,46 +37,60 @@ public class MapActivity extends AppCompatActivity implements ChildEventListener
         String user_dat = dataSnapshot.getValue(String.class);
         String[] data = user_dat.split(";");
 
-        Log.d("BD_namae",data[0]);
-        Log.d("BD_wish",data[3]);
+        Log.d("BD_namae", data[1]);
+        Log.d("BD_wish", data[4]);
 
-        String username=data[0];
-        int x= Integer.parseInt(data[1]);
-        int y= Integer.parseInt(data[2]);
-        String wish = data[3];
+        String title = data[0];
+        String username = data[1];
+        int x = Integer.parseInt(data[2]);
+        int y = Integer.parseInt(data[3]);
+        String wish = data[4];
 
-        Button b = new Button(getApplicationContext());
-        LinearLayout.LayoutParams linnear_lay = new LinearLayout.LayoutParams(250, 450); // высота и ширина
-        linnear_lay.leftMargin = x; // отступ слева
-        linnear_lay.topMargin = y; // отступ сверху
+        Button btnNew = new Button(this);
+        btnNew.setText("AAAAAAAAAAA");
 
-        b.setLayoutParams(linnear_lay);
-        b.setLayoutParams(
-                new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT)
-
-        );
-        b.setId(countID);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("Wish","wish clicked");
-            }
-        });
-
+        btnNew.setX(x);
+        btnNew.setX(y);
+        btnNew.setHeight(64);
+        btnNew.setWidth(64);
+        btnNew.setId(countID);
+//        Button b = new Button(getApplicationContext());
+//        LinearLayout.LayoutParams linnear_lay = new LinearLayout.LayoutParams(250, 450); // высота и ширина
+//        linnear_lay.leftMargin = x; // отступ слева
+//        linnear_lay.topMargin = y; // отступ сверху
+//
+//        b.setLayoutParams(linnear_lay);
+//        b.setLayoutParams(
+//                new LinearLayout.LayoutParams(
+//                        LinearLayout.LayoutParams.MATCH_PARENT,
+//                        LinearLayout.LayoutParams.WRAP_CONTENT)
+//
+//        );
+//        b.setId(countID);
+//        b.setText("Aaaaaaaaaaaa");
+//        b.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("Wish","wish clicked");
+//            }
+//        });
+        Log.d("Map","button created");
         countID++;
     }
 
     @Override
-    public void onChildChanged(DataSnapshot dataSnapshot, String prevChildKey) {}
+    public void onChildChanged(DataSnapshot dataSnapshot, String prevChildKey) {
+    }
 
     @Override
-    public void onChildRemoved(DataSnapshot dataSnapshot) {}
+    public void onChildRemoved(DataSnapshot dataSnapshot) {
+    }
 
     @Override
-    public void onChildMoved(DataSnapshot dataSnapshot, String prevChildKey) {}
+    public void onChildMoved(DataSnapshot dataSnapshot, String prevChildKey) {
+    }
 
     @Override
-    public void onCancelled(DatabaseError databaseError) {}
+    public void onCancelled(DatabaseError databaseError) {
+    }
 }
