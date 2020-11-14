@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.submit_log:
                 Log.d("Button","logged");
-                Intent intent1 = new Intent(MainActivity.this,MapActivity.class);
+                Intent intent1 = new Intent(MainActivity.this,WishTableActivity.class);
                 startActivity(intent1);
                 break;
             case R.id.create_acc:

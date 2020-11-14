@@ -40,7 +40,7 @@ public class NewAcc extends AppCompatActivity implements View.OnClickListener {
         {
             case R.id.submit_log:
                 Log.d("Button","logged");
-                Intent intent = new Intent(NewAcc.this, MapActivity.class);
+                Intent intent = new Intent(NewAcc.this, WishTableActivity.class);
                 user=namae.getText().toString();
                 intent.putExtra("user",user);
                 startActivity(intent);

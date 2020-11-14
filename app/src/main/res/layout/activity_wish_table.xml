@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WishTableActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="39dp">
+
+        <TextView
+            android:id="@+id/title_table_wish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wishes waiting for you:"
+            android:paddingBottom="24dp"
+            android:textSize="36sp"
+            android:gravity="center"
+            app:fontFamily="@font/archivo_black"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
